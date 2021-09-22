@@ -5,7 +5,7 @@ import RadioForm from 'react-native-simple-radio-button';
 
 export default function App() {
   const [weight, setWeight] = useState(0);
-  const [time, setTime] = useState(0);
+  const [time, setTime] = useState(1);
   const [gender, setGender] = useState('male');
   const [bottles, setBottles] = useState([]);
   const [promilles, setPromilles] = useState();
@@ -62,11 +62,18 @@ export default function App() {
 
     if (gender === 'male') {
       result = gramsLeft / (weight * 0.7);
+      if (result < 0) {
+        result = 0;
+      }
     }
-    else {
+    else  {
       result = gramsLeft / (weight * 0.6);
+      if (result < 0) {
+        result = 0;
+      }
     }
     setPromilles(result.toFixed(2));
+  
   }
 
     
