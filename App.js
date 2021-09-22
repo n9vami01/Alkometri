@@ -7,7 +7,7 @@ export default function App() {
   const [weight, setWeight] = useState(0);
   const [time, setTime] = useState(1);
   const [gender, setGender] = useState('male');
-  const [bottles, setBottles] = useState([]);
+  const [bottles, setBottles] = useState(1);
   const [promilles, setPromilles] = useState();
   
   
